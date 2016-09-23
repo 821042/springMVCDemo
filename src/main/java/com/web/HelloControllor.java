@@ -28,8 +28,8 @@ public class HelloControllor {
         String userName = request.getParameter("userName");
         //试试看
 		//在这里我测试一下（仅加入该行）
-        System.out.println(getBean(request,UserInfo.class).getUser_name());
-        int resultCode = helloService.addUser(getBean(request,UserInfo.class).getUser_name());
+        System.out.println(getBean(request,UserInfo.class));
+        int resultCode = helloService.addUser(getBean(request,UserInfo.class));
         String rspInfo = "你好!" + userName + ",操作结果码=" + resultCode;
         //response.setHeader("Content-type","text/html;charset=UTF-8"); 
         //response.getOutputStream().write(rspInfo.getBytes("UTF-8"));

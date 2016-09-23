@@ -9,7 +9,7 @@ public class UserInfo {
 	private String user_name;
 	private String user_pwd;
 	private Integer user_age;
-	
+
 	public UserInfo() {
 		super();
 	}
