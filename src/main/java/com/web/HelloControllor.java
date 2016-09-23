@@ -28,6 +28,9 @@ public class HelloControllor {
         String userName = request.getParameter("userName");
         //试试看
 		//在这里我测试一下（仅加入该行）
+        //假设我现在正在搞开发，忽然同事跑过来说他在开发的过程中碰到了一个bug，让我赶紧解决下，但是我现在的工作还没有完成，怎么办？
+        //那么我就需要先Stash当前正在做的事情啦，先帮同事解决问题再回到之前的Stash
+        //bug有可能就在我当前修改的文件里。
         System.out.println(getBean(request,UserInfo.class));
         int resultCode = helloService.addUser(getBean(request,UserInfo.class));
         String rspInfo = "你好!" + userName + ",操作结果码=" + resultCode;
@@ -36,6 +39,11 @@ public class HelloControllor {
         //同事说这里有bug！！！！左找又找，左测试又测试，没有呀，鬼崽子，原来是同事自己调用写错了参数，好吧，看来是代码容错不行，针对同事的
         //这个错误，在这里判断下，如果他传入的参数有问题，我需要友好的告诉他那个参数出错了。
         //ok，解决了，提交上去，给他用吧！
+
+
+        //git果真牛逼呀， 帮同事解决bug后回到之前保存的Stash我以为会要我手动合并下呢，没想到没有修改同一处代码
+        //git居然能自动合并。
+        //好了好了，不废话了，这个模块开发完了，提交吧
         return "NewFile";
     }
     
