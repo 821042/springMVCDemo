@@ -33,6 +33,9 @@ public class HelloControllor {
         String rspInfo = "你好!" + userName + ",操作结果码=" + resultCode;
         //response.setHeader("Content-type","text/html;charset=UTF-8"); 
         //response.getOutputStream().write(rspInfo.getBytes("UTF-8"));
+        //同事说这里有bug！！！！左找又找，左测试又测试，没有呀，鬼崽子，原来是同事自己调用写错了参数，好吧，看来是代码容错不行，针对同事的
+        //这个错误，在这里判断下，如果他传入的参数有问题，我需要友好的告诉他那个参数出错了。
+        //ok，解决了，提交上去，给他用吧！
         return "NewFile";
     }
     
